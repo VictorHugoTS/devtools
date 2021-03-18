@@ -33,10 +33,10 @@ sudo openvpn --config client.ovpn
 
 another option:
 
-        localectl --no-convert set-x11-keymap XXX 
-            -> where XXX can be: 
-                us
-                br 
+    localectl --no-convert set-x11-keymap XXX 
+        -> where XXX can be: 
+           us
+           br 
 
 ## Reset locked user centos
 
