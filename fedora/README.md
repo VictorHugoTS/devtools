@@ -23,7 +23,7 @@ xrandr --output eDP-1 --brightness 0.7
 
 ## VPN:
 
-sudo openvpn --config client.ovpn
+    sudo openvpn --config /home/me/Documents/support_files/client.ovpn --auth-user-pass /home/me/Documents/support_files/vpn.txt
 
 ## Change locale of keyboard:
 
