@@ -40,6 +40,9 @@ another option:
            us
            br 
 
+another option:
+
+    setxkbmap -model abnt -layout us -variant intl -option ctrl:nocaps
 
 ## Telinha bonitinha:
 
