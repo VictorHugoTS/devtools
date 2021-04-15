@@ -58,6 +58,10 @@ another option:
 
     ~/.config/autostart
 
+## Best search file method:
+
+    find . -maxdepth 2 -type f | xargs grep <text-to-search-for>
+
 ## Reset locked user centos
 
 pam_tally2 --user=USERNAME --reset
@@ -75,6 +79,30 @@ systemctl XXX sshd.service
 ## Test if some port is available on remote:
 
 netstat -ltnup | grep 'IP:PORT'
+
+## Mudar para Fish:
+You can use bash to parse /etc/profile and ~/.profile, and then start fish.
+
+Create /usr/local/bin/fishlogin with contents
+
+ #!/bin/bash -l
+ exec -l fish "$@"
+Make it executable
+
+ sudo chmod a+rx /usr/local/bin/fishlogin
+Check that it works by running fishlogin and checking that you end up in a Fish shell. Press Control+D to exit the Fish shell.
+
+Add it to /etc/shells
+
+ echo /usr/local/bin/fishlogin | sudo tee -a /etc/shells
+Set it as your default shell.
+
+Under Linux:
+
+ sudo usermod -s /usr/local/bin/fishlogin $USER
+Under macOS:
+
+ chsh -s /usr/local/fishlogin $USER
 
 ## Comandos aleatorios:
 
